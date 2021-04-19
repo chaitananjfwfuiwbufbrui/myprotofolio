@@ -1,0 +1,281 @@
+{% load static %}
+<!DOCTYPE html>
+<!--
+Template Name: Gleblu
+Author: <a href="https://www.os-templates.com/">OS Templates</a>
+Author URI: https://www.os-templates.com/
+Copyright: OS-Templates.com
+Licence: Free to use under our free template licence terms
+Licence URI: https://www.os-templates.com/template-terms
+-->
+<html lang="">
+<!-- To declare your language - read more here: https://www.w3.org/International/questions/qa-html-language-declarations -->
+<head>
+<title>Chaitanya</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="{% static 'layout/styles/layout.css' %}" rel="stylesheet" type="text/css" media="all">
+</head>
+<body id="top">
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row1">
+  <header id="header" class="hoc clear">
+    <div id="logo" class="fl_left"> 
+      <!-- ################################################################################################ -->
+      
+      <!-- ################################################################################################ -->
+    </div>
+    <nav id="mainav" class="fl_right"> 
+      <!-- ################################################################################################ -->
+      <ul class="clear">
+        <li class="active"><a href="/">Home</a></li>
+        
+        <li><a href="/blogs">Blogs</a></li>
+      </ul>
+      <!-- ################################################################################################ -->
+    </nav>
+  </header>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper bgded overlay" style="background-image:url('https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8Y29kZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60');">
+  <div id="pageintro" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <article style="margin-bottom:0pc">
+      <h3 class="heading">Chaitanya</h3>
+      <p>Django devloper / Machine Learning  Engineering</p>
+      <footer>
+        
+
+          <h2 class="heading" style="margin-top:2em ; padding: 0pc;">My Skill Set</h2>
+        
+        
+      </footer>
+    </article>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row2">
+  <section id="introblocks" class="hoc container clear"> 
+    <!-- ################################################################################################ -->
+    <ul class="nospace group">
+      <li class="one_third first">
+        <article><a href="#"><i class="fas fa-paint-brush"></i></a>
+          <h6 class="heading underline">Responsive web designer</h6>
+          <p>I use html, css, bootstrap and materialize to create responsive web-designs.</p>
+        </article>
+      </li>
+      <li class="one_third">
+        <article ><a href="#"><i class="fas fa-code"></i></a>
+          <h6 class="heading underline">Django devloper</h6>
+          <p>It is of the first framework I used and instantly fell in love with it! Nowadays, I develop websites using Django like this one! </p>
+        </article>
+      </li>
+      <li class="one_third">
+        <article><a href="#"><img src="{% static 'images/demo/ai.svg' %}" alt="" srcset=""></a>
+          <h6 class="heading underline">Machine Learning Engineering</h6>
+          <p>I'm a newbie in this field even though I'm able to create a machine learning model quite often .</p>
+        </article>
+      </li>
+    </ul>
+    <!-- ################################################################################################ -->
+  </section>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row2">
+  <div class="center btmspace-80">
+    <h6 class="heading underline font-x2">My Projects</h6>
+  </div>
+  {% for i, range, domainname in allprojects %}
+
+  <section class="hoc container clear"> 
+    <!-- ################################################################################################ -->
+    
+      
+    <div class="btmspace-80">
+      <h6 class="heading  font-x2">{{domainname}}:</h6>
+    </div>
+    <ul class="nospace group">
+      {% for single in i  %}
+      
+      
+          
+        <li class="one_quarter">
+          <figure style="margin-bottom:2em ;" class="fixwidth"><img src="{{single.projects_image.url}}" alt=""></a>
+            <figcaption class="bold uppercase center">{{single.project_name}}</figcaption>
+            
+          </figure>
+          <a target="_blank"  href="{{single.project_demo}}" class="btn">Demo </a><a  target="_blank" style="margin-left: 5em;" href="{{single.project_gitlink}}" class="btn"> <i class="fab fa-github"></i>  code </a>
+        </li>
+        
+        
+      
+    
+      
+        {% endfor %}
+    </ul>
+    <!-- ################################################################################################ -->
+  </section>
+  {% endfor %}
+ 
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+{% if reviews %}
+  
+
+<div class="wrapper bgded overlay" style="background-image:url('images/demo/backgrounds/01.png');">
+  <section class="hoc container clear"> 
+    <!-- ################################################################################################ -->
+    <div class="center btmspace-80">
+      <h6 class="heading underline font-x2">Integer sodales ultrices</h6>
+    </div>
+    <ul id="testimonials" class="nospace group btmspace-80">
+      <li class="one_half first">
+        <blockquote>Feugiat ligula augue tempor orci ullamcorper mattis erat pede at magna praesent non justo praesent vitae magna at metus pulvinar aliquam nulla dictum vestibulum lorem nam at elit vel erat eleifend.</blockquote>
+        <figure class="clear"><img class="circle" src="images/demo/60x60.png" alt="">
+          <figcaption>
+            <h6 class="heading">A. Doe</h6>
+            <em>CEO / Quis velit neque</em></figcaption>
+        </figure>
+      </li>
+      <li class="one_half">
+        <blockquote>Nec nisi id odio ultricies fermentum integer dolor nisi bibendum a faucibus nec ultricies at arcu aliquam nec eros quis est placerat vehicula in hac habitasse platea dictumst aliquam erat volutpat.</blockquote>
+        <figure class="clear"><img class="circle" src="images/demo/60x60.png" alt="">
+          <figcaption>
+            <h6 class="heading">B. Doe</h6>
+            <em>Director / Euismod tincidunt</em></figcaption>
+        </figure>
+      </li>
+    </ul>
+    <footer class="center"><a class="btn" href="#">Phasellus pede mauris</a></footer>
+    <!-- ################################################################################################ -->
+  </section>
+</div>
+{% endif %}
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+
+{% if blogs %}
+  
+
+<div class="wrapper row3">
+  <section class="hoc container clear"> 
+    <!-- ################################################################################################ -->
+    <div class="center btmspace-80">
+      <h6 class="heading underline font-x2">Hendrerit ligula eu diam</h6>
+    </div>
+    <ul id="latest" class="nospace group">
+      <li class="one_third first">
+        <article>
+          <figure><a class="imgover" href="#"><img src="images/demo/348x261.png" alt=""></a></figure>
+          <div class="excerpt">
+            <h6 class="heading">In lobortis metus at quam donec velit maecenas lorem</h6>
+            <ul class="nospace meta">
+              <li><i class="fas fa-user rgtspace-5"></i> <a href="#">Admin</a></li>
+              <li><i class="far fa-clock rgtspace-5"></i>
+                <time datetime="2045-04-06T08:15+00:00">06 Apr 2045</time>
+              </li>
+            </ul>
+            <p>Ac nibh blandit eleifend nullam sed nisi in justo hendrerit egestas proin consectetuer turpis quis malesuada [<a href="#">&hellip;</a>]</p>
+            <footer><a class="btn" href="#">Read More</a></footer>
+          </div>
+        </article>
+      </li>
+      <li class="one_third">
+        <article>
+          <figure><a class="imgover" href="#"><img src="images/demo/348x261.png" alt=""></a></figure>
+          <div class="excerpt">
+            <h6 class="heading">Scelerisque justo lorem porta enim nec interdum quam</h6>
+            <ul class="nospace meta">
+              <li><i class="fas fa-user rgtspace-5"></i> <a href="#">Admin</a></li>
+              <li><i class="far fa-clock rgtspace-5"></i>
+                <time datetime="2045-04-05T08:15+00:00">05 Apr 2045</time>
+              </li>
+            </ul>
+            <p>Felis et libero aliquam ultrices aliquam quis purus feugiat tortor sodales vestibulum nunc sollicitudin tellus [<a href="#">&hellip;</a>]</p>
+            <footer><a class="btn" href="#">Read More</a></footer>
+          </div>
+        </article>
+      </li>
+      <li class="one_third">
+        <article>
+          <figure><a class="imgover" href="#"><img src="images/demo/348x261.png" alt=""></a></figure>
+          <div class="excerpt">
+            <h6 class="heading">Ultrices iaculis condimentum felis eros rutrum magna</h6>
+            <ul class="nospace meta">
+              <li><i class="fas fa-user rgtspace-5"></i> <a href="#">Admin</a></li>
+              <li><i class="far fa-clock rgtspace-5"></i>
+                <time datetime="2045-04-04T08:15+00:00">04 Apr 2045</time>
+              </li>
+            </ul>
+            <p>A blandit augue lorem ac est pellentesque et risus sed quis magna vestibulum erat nisl luctus iaculis consequat [<a href="#">&hellip;</a>]</p>
+            <footer><a class="btn" href="#">Read More</a></footer>
+          </div>
+        </article>
+      </li>
+    </ul>
+    <!-- ################################################################################################ -->
+  </section>
+</div>
+{% endif %}
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row4">
+  <footer id="footer" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <div class="one_quarter first">
+      <h6 class="heading">Personal detailes</h6>
+      <ul class="nospace linklist contact btmspace-30">
+        <li><i class="fas fa-map-marker-alt"></i>
+          <address>
+          s-2 , sai appartement,Medchal  (501401),Hyderabad,  Telanagana
+          </address>
+        </li>
+        <li><i class="fas fa-phone"></i> +91 9063917425</li>
+        <li><i class="far fa-envelope"></i> kc508275@gmail.com</li>
+      </ul>
+      <ul class="faico clear">
+        <li><a class="faicon-facebook" href="#"><i class="fab fa-facebook"></i></a></li>
+        <li><a class="faicon-google-plus" href="#"><i class="fab fa-google-plus-g"></i></a></li>
+        <li><a class="faicon-linkedin" href="#"><i class="fab fa-linkedin"></i></a></li>
+        <li><a class="faicon-twitter" href="#"><i class="fab fa-twitter"></i></a></li>
+        
+      </ul>
+    </div>
+    
+    <!-- ################################################################################################ -->
+  </footer>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+<script src="layout/scripts/jquery.min.js"></script>
+<script src="layout/scripts/jquery.backtotop.js"></script>
+<script src="layout/scripts/jquery.mobilemenu.js"></script>
+</body>
+</html>
